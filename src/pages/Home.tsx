@@ -24,7 +24,7 @@ export default function Home() {
           </div>
           <nav className="flex items-center gap-4">
             <a
-              href="/privacy-policy"
+              href="https://kidspark-bay.vercel.app/privacy-policy"
               className="text-gray-600 hover:text-purple-600 font-medium transition-colors hidden sm:block"
             >
               Privacy Policy
