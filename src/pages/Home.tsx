@@ -323,7 +323,7 @@ export default function Home() {
             </div>
             
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Tectonic. Made with ❤️ in Abu Dhabi
+              © {new Date().getFullYear()} Tectonic. Made with ❤️
             </p>
           </div>
         </div>
