@@ -260,7 +260,7 @@ export default function PrivacyPolicy() {
                 </motion.p>
                 <motion.p whileHover={{ x: 5 }} className="flex items-center gap-2">
                   <span className="text-purple-500">📍</span>
-                  <strong>Location:</strong> UAE
+                  <strong>Location::</strong> UAE
                 </motion.p>
               </div>
             </motion.section>
