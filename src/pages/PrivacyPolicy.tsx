@@ -137,6 +137,7 @@ export default function PrivacyPolicy() {
                     {[
                       "No names or email addresses",
                       "No location data",
+                      "No Phone numbers",
                       "No photos or videos",
                       "No device identifiers",
                       "No analytics or tracking"
@@ -172,9 +173,9 @@ export default function PrivacyPolicy() {
                 </motion.span> Children's Privacy (COPPA Compliance)
               </h2>
               <p className="leading-relaxed">
-                KidSpark is designed for children and complies with the Children's Online Privacy Protection Act (COPPA). 
-                Since we do not collect any personal information from any users, including children under 13, 
-                parents can feel confident that their children's privacy is protected while using our app.
+                KidSpark is designed for children ages 6-8 and complies with the 
+                Children's Online Privacy Protection Act (COPPA) and Google Play 
+                Families Policy.
               </p>
             </motion.section>
 
@@ -247,7 +248,11 @@ export default function PrivacyPolicy() {
                   <strong>Email:</strong>{' '}
                   <a href="mailto:sher4z2k@gmail.com" className="text-purple-600 hover:text-purple-700 underline">
                     sher4z2k@gmail.com
-                  </a>
+                  </a>       
+                </motion.p>
+                 <motion.p whileHover={{ x: 5 }} className="flex items-center gap-2">
+                  <span className="text-purple-500">🌐</span>
+                  <strong>Website:</strong> https://kid-spark.app
                 </motion.p>
                 <motion.p whileHover={{ x: 5 }} className="flex items-center gap-2">
                   <span className="text-purple-500">🏢</span>
