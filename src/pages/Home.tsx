@@ -309,7 +309,7 @@ export default function Home() {
               <a href="/privacy-policy" className="hover:text-purple-600 transition-colors font-medium">
                 Privacy Policy
               </a>
-              <a href="mailto:sher4z2k@gmail.com" className="hover:text-purple-600 transition-colors font-medium">
+              <a href="mailto:support@kid-spark.app" className="hover:text-purple-600 transition-colors font-medium">
                 Contact Us
               </a>
               <a 
