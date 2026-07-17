@@ -246,8 +246,8 @@ export default function PrivacyPolicy() {
                 <motion.p whileHover={{ x: 5 }} className="flex items-center gap-2">
                   <span className="text-purple-500">📧</span>
                   <strong>Email:</strong>{' '}
-                  <a href="mailto:sher4z2k@gmail.com" className="text-purple-600 hover:text-purple-700 underline">
-                    sher4z2k@gmail.com
+                  <a href="mailto:support@kid-spark.app" className="text-purple-600 hover:text-purple-700 underline">
+                    support@kid-spark.app
                   </a>       
                 </motion.p>
                  <motion.p whileHover={{ x: 5 }} className="flex items-center gap-2">
