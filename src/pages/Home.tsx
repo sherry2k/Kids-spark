@@ -263,7 +263,7 @@ export default function Home() {
           className="bg-white rounded-3xl p-8 md:p-12 text-center shadow-xl"
         >
           <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-gray-800">
-            Trusted by Parents Everywhere 👨‍👩‍👧‍👦
+            Give your child a fun, safe way to learn with KidSpark!
           </h2>
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">
             KidSpark is designed with your child's safety and education in mind. 
