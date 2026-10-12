@@ -1,11 +1,13 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 export default function PrivacyPolicy() {
-  const currentDate = new Date().toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
+  useEffect(() => {
+    document.title = 'Privacy Policy - KidSpark';
+  }, []);
+
+  // Update this date manually whenever you change the policy
+  const currentDate = 'October 12, 2026';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50" style={{ fontFamily: 'Nunito, sans-serif' }}>
@@ -51,7 +53,7 @@ export default function PrivacyPolicy() {
           className="bg-white rounded-3xl shadow-xl p-8 md:p-12"
         >
           {/* Title */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -76,9 +78,9 @@ export default function PrivacyPolicy() {
 
           {/* Policy Content */}
           <div className="space-y-8 text-gray-700">
-            
+
             {/* Introduction */}
-            <motion.section 
+            <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -93,7 +95,7 @@ export default function PrivacyPolicy() {
                 </motion.span> Introduction
               </h2>
               <p className="leading-relaxed">
-                Welcome to <strong>KidSpark</strong>! This Privacy Policy explains how Tectonic ("we", "us", or "our") 
+                Welcome to <strong>KidSpark</strong>! This Privacy Policy explains how Tectonic ("we", "us", or "our")
                 handles information when you use our educational games and learning application designed for children.
                 We are committed to protecting the privacy of our young users and their families.
               </p>
@@ -130,14 +132,14 @@ export default function PrivacyPolicy() {
                     We do NOT collect any personal data!
                   </p>
                   <p className="leading-relaxed text-green-700">
-                    KidSpark is designed with children's privacy as our top priority. Our app does not collect, 
+                    KidSpark is designed with children's privacy as our top priority. Our app does not collect,
                     store, or share any personal information from users. This includes:
                   </p>
                   <ul className="mt-3 space-y-2">
                     {[
                       "No names or email addresses",
                       "No location data",
-                      "No Phone numbers",
+                      "No phone numbers",
                       "No photos or videos",
                       "No device identifiers",
                       "No analytics or tracking"
@@ -158,7 +160,7 @@ export default function PrivacyPolicy() {
             </motion.section>
 
             {/* Children's Privacy */}
-            <motion.section 
+            <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
@@ -173,14 +175,14 @@ export default function PrivacyPolicy() {
                 </motion.span> Children's Privacy (COPPA Compliance)
               </h2>
               <p className="leading-relaxed">
-                KidSpark is designed for children ages 6-8 and complies with the 
-                Children's Online Privacy Protection Act (COPPA) and Google Play 
+                KidSpark is designed for children ages 6-8 and complies with the
+                Children's Online Privacy Protection Act (COPPA) and Google Play
                 Families Policy.
               </p>
             </motion.section>
 
             {/* Third Party Services */}
-            <motion.section 
+            <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -189,14 +191,14 @@ export default function PrivacyPolicy() {
                 <span className="text-2xl">🔗</span> Third-Party Services
               </h2>
               <p className="leading-relaxed">
-                KidSpark does not integrate with any third-party services that collect user data. 
-                We do not use advertising networks, analytics tools, or social media integrations 
+                KidSpark does not integrate with any third-party services that collect user data.
+                We do not use advertising networks, analytics tools, or social media integrations
                 that could track our users.
               </p>
             </motion.section>
 
             {/* App Functionality */}
-            <motion.section 
+            <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
@@ -205,14 +207,14 @@ export default function PrivacyPolicy() {
                 <span className="text-2xl">📱</span> App Functionality
               </h2>
               <p className="leading-relaxed">
-                KidSpark is an educational app that provides fun learning games for children. 
-                All game progress and settings are stored locally on your device and are not 
+                KidSpark is an educational app that provides fun learning games for children.
+                All game progress and settings are stored locally on your device and are not
                 transmitted to any external servers.
               </p>
             </motion.section>
 
             {/* Changes to Policy */}
-            <motion.section 
+            <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
@@ -221,8 +223,8 @@ export default function PrivacyPolicy() {
                 <span className="text-2xl">📝</span> Changes to This Policy
               </h2>
               <p className="leading-relaxed">
-                We may update this Privacy Policy from time to time. Any changes will be posted on this page 
-                with an updated revision date. We encourage you to review this Privacy Policy periodically 
+                We may update this Privacy Policy from time to time. Any changes will be posted on this page
+                with an updated revision date. We encourage you to review this Privacy Policy periodically
                 for any changes.
               </p>
             </motion.section>
@@ -239,7 +241,7 @@ export default function PrivacyPolicy() {
                 <span className="text-2xl">📧</span> Contact Us
               </h2>
               <p className="leading-relaxed mb-4">
-                If you have any questions or concerns about this Privacy Policy or our practices, 
+                If you have any questions or concerns about this Privacy Policy or our practices,
                 please contact us:
               </p>
               <div className="space-y-2">
@@ -248,15 +250,15 @@ export default function PrivacyPolicy() {
                   <strong>Email:</strong>{' '}
                   <a href="mailto:support@kid-spark.app" className="text-purple-600 hover:text-purple-700 underline">
                     support@kid-spark.app
-                  </a>       
+                  </a>
                 </motion.p>
-                 <motion.p whileHover={{ x: 5 }} className="flex items-center gap-2">
-  <span className="text-purple-500">🌐</span>
-  <strong>Website:</strong>{' '}
-  <a href="/" className="text-purple-600 hover:text-purple-700 underline">
-    kid-spark.app
-  </a>
-</motion.p>
+                <motion.p whileHover={{ x: 5 }} className="flex items-center gap-2">
+                  <span className="text-purple-500">🌐</span>
+                  <strong>Website:</strong>{' '}
+                  <a href="/" className="text-purple-600 hover:text-purple-700 underline">
+                    kid-spark.app
+                  </a>
+                </motion.p>
                 <motion.p whileHover={{ x: 5 }} className="flex items-center gap-2">
                   <span className="text-purple-500">🏢</span>
                   <strong>Name:</strong> Tectonic
