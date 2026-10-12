@@ -46,7 +46,9 @@ export default function Home() {
         className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-20"
       >
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <motion.div 
+          <motion.a 
+            href="/"
+            aria-label="KidSpark home"
             className="flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
           >
@@ -59,7 +61,7 @@ export default function Home() {
             <span className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent">
               KidSpark
             </span>
-          </motion.div>
+          </motion.a>
           <nav className="flex items-center gap-4">
             <a
               href="/privacy-policy"
@@ -136,7 +138,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <motion.a
-              href="https://play.google.com/store/apps/details?id=app.vercel.kidspark_bay.twa"
+              href="https://play.google.com/store/apps/details?id=com.kid_spark.app"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -3 }}
@@ -263,7 +265,7 @@ export default function Home() {
           className="bg-white rounded-3xl p-8 md:p-12 text-center shadow-xl"
         >
           <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-gray-800">
-            Give your child a fun, safe way to learn with KidSpark!
+            Trusted by Parents Everywhere 👨‍👩‍👧‍👦
           </h2>
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">
             KidSpark is designed with your child's safety and education in mind. 
@@ -296,14 +298,14 @@ export default function Home() {
       <footer className="relative z-10 bg-white/80 backdrop-blur-sm border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
+            <a href="/" aria-label="KidSpark home" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-500 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
                 <img src="/icon.png" alt="KidSpark" className="w-8 h-8 rounded-lg" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 KidSpark
               </span>
-            </div>
+            </a>
             
             <div className="flex items-center gap-6 text-gray-600">
               <a href="/privacy-policy" className="hover:text-purple-600 transition-colors font-medium">
