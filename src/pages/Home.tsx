@@ -143,7 +143,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-7"
           >
             <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent">
               Learning Made
@@ -153,6 +153,33 @@ export default function Home() {
               Fun & Exciting!
             </span>
           </motion.h1>
+
+          {/* Tagline: Learn • Create • Imagine */}
+          <div
+            className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8"
+            aria-label="Learn, Create, Imagine"
+          >
+            {[
+              { word: 'Learn', icon: '📚', color: 'from-blue-500 to-cyan-500', shadow: '#0369A1' },
+              { word: 'Create', icon: '🎨', color: 'from-orange-400 to-pink-500', shadow: '#BE185D' },
+              { word: 'Imagine', icon: '✨', color: 'from-purple-500 to-violet-600', shadow: '#5B21B6' },
+            ].map((t, i) => (
+              <div key={t.word} className="flex items-center gap-2 sm:gap-3">
+                {i > 0 && <span className="text-2xl font-black text-gray-300" aria-hidden="true">•</span>}
+                <motion.span
+                  initial={{ opacity: 0, scale: 0.6, y: 10 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ delay: 0.45 + i * 0.15, type: 'spring', stiffness: 260, damping: 16 }}
+                  whileHover={{ y: -4, rotate: i === 1 ? 0 : i === 0 ? -3 : 3 }}
+                  className={`inline-flex items-center gap-1.5 bg-gradient-to-r ${t.color} text-white text-lg md:text-2xl font-extrabold px-4 md:px-5 py-2 rounded-full border-4 border-white`}
+                  style={{ boxShadow: `0 5px 0 ${t.shadow}, 0 8px 18px rgba(0,0,0,0.12)` }}
+                >
+                  <span aria-hidden="true">{t.icon}</span>
+                  {t.word}
+                </motion.span>
+              </div>
+            ))}
+          </div>
 
           {/* Subtitle */}
           <motion.p 
@@ -471,6 +498,7 @@ export default function Home() {
             </div>
             
             <p className="text-gray-500 text-sm">
+              <span className="block font-bold text-gray-600">Learn • Create • Imagine</span>
               © {new Date().getFullYear()} Tectonic. Made with ❤️
             </p>
           </div>
