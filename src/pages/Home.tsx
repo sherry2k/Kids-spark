@@ -188,7 +188,7 @@ export default function Home() {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
           >
-            Free learning games for preschool and kindergarten kids, ages 4–8.
+            Free learning games for kindergarten and early school kids, ages 6–8.
             KidSpark helps children learn ABCs, phonics, numbers and early math
             through play, with colorful games, puzzles and creative activities.
           </motion.p>
