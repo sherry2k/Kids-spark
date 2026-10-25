@@ -188,8 +188,9 @@ export default function Home() {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
           >
-            KidSpark helps children learn through play with colorful games, 
-            interactive activities, and engaging challenges designed by educators.
+            Free learning games for preschool and kindergarten kids, ages 4–8.
+            KidSpark helps children learn ABCs, phonics, numbers and early math
+            through play, with colorful games, puzzles and creative activities.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -499,6 +500,7 @@ export default function Home() {
             
             <p className="text-gray-500 text-sm">
               <span className="block font-bold text-gray-600">Learn • Create • Imagine</span>
+              <span className="block">KidSpark (Kid Spark) – free learning games for kids</span>
               © {new Date().getFullYear()} Tectonic. Made with ❤️
             </p>
           </div>
