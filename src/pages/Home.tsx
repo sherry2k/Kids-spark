@@ -122,6 +122,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative z-10 max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div className="flex justify-center mb-3 md:mb-0 md:absolute md:top-8 md:right-4 lg:top-10 lg:right-0 pointer-events-none">
+  <SparkMascot className="w-28 sm:w-32 md:w-40 lg:w-56" />
+</div>
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
