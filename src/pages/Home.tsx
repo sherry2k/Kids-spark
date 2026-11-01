@@ -1,5 +1,7 @@
+import SparkMascot from '../components/SparkMascot';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 
 type Category = 'all' | 'reading' | 'math' | 'brain' | 'explore' | 'creative';
 
