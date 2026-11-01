@@ -369,13 +369,22 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
           
-          <motion.div
-            animate={{ rotate: [0, 5, -5, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="text-6xl mb-4"
-          >
-            🎉
-          </motion.div>
+          {/* Spark: on phones, in place of the 🎉 */}
+<SparkMascot className="w-28 mx-auto mb-2 md:hidden" />
+
+{/* 🎉 only on larger screens */}
+<motion.div
+  animate={{ rotate: [0, 5, -5, 0] }}
+  transition={{ duration: 4, repeat: Infinity }}
+  className="hidden md:block text-6xl mb-4"
+>
+  🎉
+</motion.div>
+
+{/* Spark peeking up from the bottom-right corner on larger screens */}
+<div className="hidden md:block absolute right-6 lg:right-12 -bottom-6 pointer-events-none">
+  <SparkMascot className="w-40 lg:w-52" />
+</div>
           <h2 className="text-2xl md:text-4xl font-extrabold mb-4">
             Ready to Start Learning?
           </h2>
