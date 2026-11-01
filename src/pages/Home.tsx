@@ -122,8 +122,11 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative z-10 max-w-6xl mx-auto px-4 py-16 md:py-24">
-        <div className="flex justify-center mb-3 md:mb-0 md:absolute md:top-8 md:right-4 lg:top-10 lg:right-0 pointer-events-none">
+        <div className="flex flex-col items-center mb-5 md:mb-0 md:absolute md:top-8 md:right-4 lg:top-10 lg:right-0 pointer-events-none">
   <SparkMascot className="w-28 sm:w-32 md:w-40 lg:w-56" />
+  <span className="-mt-1 bg-white text-purple-600 font-extrabold text-sm md:text-base px-4 py-1.5 rounded-full shadow-md border-2 border-purple-100">
+    Hi, I'm Spark! ⭐
+  </span>
 </div>
         <motion.div 
           initial={{ opacity: 0 }}
