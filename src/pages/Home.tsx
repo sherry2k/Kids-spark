@@ -479,7 +479,7 @@ export default function Home() {
             {/* Social links (website only) */}
             <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/kidspark.app2026/"
+                href="https://www.instagram.com/kidspark_app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KidSpark on Instagram"
