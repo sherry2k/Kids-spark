@@ -32,6 +32,20 @@ const screens: { src: string; title: string; desc: string; category: Exclude<Cat
   { src: '/screens/creative-studio.webp', title: 'Creative Studio', desc: 'Draw, fill, add stickers and shapes.', category: 'creative', alt: 'KidSpark Creative Studio drawing canvas with stickers and colours' },
 ];
 
+/** Winter announcement shows from 15 Nov to 15 Feb (same window as the app's winter theme). */
+const isWinterSeason = (d = new Date()) => {
+  const m = d.getMonth(); // 0 = Jan
+  const day = d.getDate();
+  return m === 10 ? day >= 15 : m === 11 || m === 0 || (m === 1 && day <= 15);
+};
+
+const winterFeatures: { icon: string; text: string }[] = [
+  { icon: '☃️', text: 'A snowy winter look on every screen' },
+  { icon: '🧣', text: 'Spark in his cosy beanie and scarf' },
+  { icon: '🎨', text: '6 new winter colouring pictures' },
+  { icon: '📚', text: 'A new Winter topic in Learn' },
+];
+
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const visibleScreens = activeCategory === 'all'
@@ -250,6 +264,81 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* What's new: winter theme announcement (hidden outside winter) */}
+      {isWinterSeason() && (
+        <section className="relative z-10 max-w-6xl mx-auto px-4 pb-4 md:pb-8" aria-labelledby="winter-title">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-500 text-white p-6 md:p-10 shadow-2xl"
+          >
+            {/* falling snow */}
+            {['top-4 left-6 text-3xl', 'top-10 left-1/3 text-2xl', 'bottom-6 left-10 text-2xl', 'top-6 right-1/3 text-3xl', 'bottom-10 right-1/2 text-xl'].map((pos, i) => (
+              <motion.span
+                key={i}
+                aria-hidden="true"
+                className={`absolute ${pos} opacity-70 pointer-events-none`}
+                animate={{ y: [0, 12, 0], rotate: [0, 20, 0] }}
+                transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                ❄️
+              </motion.span>
+            ))}
+
+            <div className="relative grid md:grid-cols-[1fr_auto] items-center gap-6 md:gap-10">
+              <div className="text-center md:text-left">
+                <span className="inline-block bg-white text-blue-600 text-xs md:text-sm font-extrabold px-3 py-1 rounded-full shadow-md mb-3">
+                  ✨ NEW · Winter update
+                </span>
+                <h2 id="winter-title" className="text-3xl md:text-5xl font-extrabold mb-3">
+                  Winter is here at KidSpark! ❄️
+                </h2>
+                <p className="text-lg md:text-xl text-white/90 mb-5 max-w-xl mx-auto md:mx-0">
+                  KidSpark now has a cosy winter look. Update the app on Google Play to see it.
+                </p>
+
+                <ul className="grid sm:grid-cols-2 gap-2 mb-6 max-w-xl mx-auto md:mx-0 text-left">
+                  {winterFeatures.map((f) => (
+                    <li key={f.text} className="flex items-center gap-2 bg-white/15 rounded-2xl px-3 py-2 font-semibold">
+                      <span className="text-2xl" aria-hidden="true">{f.icon}</span>
+                      <span>{f.text}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <motion.a
+                  href="https://play.google.com/store/apps/details?id=com.kid_spark.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
+                >
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+                  </svg>
+                  Get the winter update
+                </motion.a>
+              </div>
+
+              {/* winter Spark */}
+              <motion.img
+                src="/spark/spark-winter.webp"
+                alt="Spark the star in a pink beanie and striped scarf, waving"
+                width={640}
+                height={611}
+                loading="lazy"
+                decoding="async"
+                className="w-44 sm:w-52 md:w-64 lg:w-72 mx-auto drop-shadow-2xl"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              />
+            </div>
+          </motion.div>
+        </section>
+      )}
 
       {/* Screenshots Section */}
       <section className="relative z-10 max-w-6xl mx-auto px-4 py-16">
