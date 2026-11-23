@@ -201,12 +201,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
+            className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-3"
           >
-            Free learning games for kindergarten and early school kids, ages 4–8.
+            Free learning games for early school kids.
             KidSpark helps children learn ABCs, phonics, numbers and early math
             through play, with colorful games, puzzles and creative activities.
           </motion.p>
+          <p className="text-sm font-bold text-purple-500 mb-10">Made for ages 6–8</p>
 
           {/* CTA Buttons */}
           <motion.div
@@ -399,7 +400,7 @@ export default function Home() {
             Ready to Start Learning?
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-xl mx-auto">
-            Join thousands of happy kids who are learning while having fun with KidSpark!
+            Give your child a fun way to learn with KidSpark!
           </p>
           <motion.a
             href="https://kidspark-bay.vercel.app"
@@ -432,7 +433,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              { icon: '✅', text: 'COPPA Compliant' },
+              { icon: '✅', text: 'Privacy-First' },
               { icon: '🔒', text: 'No Data Collection' },
               { icon: '🚫', text: 'No Ads' },
               { icon: '👶', text: 'Kid-Friendly' },
