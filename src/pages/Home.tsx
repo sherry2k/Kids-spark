@@ -46,6 +46,13 @@ const winterFeatures: { icon: string; text: string }[] = [
   { icon: '📚', text: 'A new Winter topic in Learn' },
 ];
 
+const newGames: { icon: string; text: string; where: string }[] = [
+  { icon: '🕐', text: 'What time is it?', where: 'Math' },
+  { icon: '📏', text: 'Number Order', where: 'Math' },
+  { icon: '🎵', text: 'Rhyme Time', where: 'Sounds' },
+  { icon: '❓', text: 'Winter quiz questions', where: 'Quiz' },
+];
+
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const visibleScreens = activeCategory === 'all'
@@ -290,13 +297,13 @@ export default function Home() {
             <div className="relative grid md:grid-cols-[1fr_auto] items-center gap-6 md:gap-10">
               <div className="text-center md:text-left">
                 <span className="inline-block bg-white text-blue-600 text-xs md:text-sm font-extrabold px-3 py-1 rounded-full shadow-md mb-3">
-                  ✨ NEW · Winter update
+                  ✨ NEW · Winter update &amp; new games
                 </span>
                 <h2 id="winter-title" className="text-3xl md:text-5xl font-extrabold mb-3">
                   Winter is here at KidSpark! ❄️
                 </h2>
                 <p className="text-lg md:text-xl text-white/90 mb-5 max-w-xl mx-auto md:mx-0">
-                  KidSpark now has a cosy winter look. Update the app on Google Play to see it.
+                  KidSpark now has a cosy winter look and new games to play. Update the app on Google Play to see them.
                 </p>
 
                 <ul className="grid sm:grid-cols-2 gap-2 mb-6 max-w-xl mx-auto md:mx-0 text-left">
@@ -307,6 +314,22 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+
+                <div className="mb-6 max-w-xl mx-auto md:mx-0">
+                  <p className="font-extrabold text-lg mb-2">Also new: more games to play 🎮</p>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-2">
+                    {newGames.map((g) => (
+                      <span
+                        key={g.text}
+                        className="inline-flex items-center gap-1.5 bg-white text-blue-700 rounded-full px-3 py-1.5 font-bold text-sm shadow-md"
+                      >
+                        <span aria-hidden="true">{g.icon}</span>
+                        {g.text}
+                        <span className="text-xs font-semibold text-blue-400">· {g.where}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
                 <motion.a
                   href="https://play.google.com/store/apps/details?id=com.kid_spark.app"
@@ -319,7 +342,7 @@ export default function Home() {
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
                   </svg>
-                  Get the winter update
+                  Get the update
                 </motion.a>
               </div>
 
