@@ -40,35 +40,35 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50" style={{ fontFamily: 'Nunito, sans-serif' }}>
-      
+
       {/* Floating Decorations */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <motion.div 
+        <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-20 left-10 text-6xl"
         >🌟</motion.div>
-        <motion.div 
+        <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           className="absolute top-40 right-20 text-5xl"
         >🎨</motion.div>
-        <motion.div 
+        <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className="absolute bottom-40 left-20 text-5xl"
         >🎮</motion.div>
-        <motion.div 
+        <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
           className="absolute bottom-20 right-10 text-6xl"
         >📚</motion.div>
-        <motion.div 
+        <motion.div
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="absolute top-1/3 left-1/4 text-4xl"
         >✨</motion.div>
-        <motion.div 
+        <motion.div
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 2, repeat: Infinity, delay: 1 }}
           className="absolute top-1/2 right-1/4 text-4xl"
@@ -83,13 +83,13 @@ export default function Home() {
         className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-20"
       >
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <motion.a 
+          <motion.a
             href="/"
             aria-label="KidSpark home"
             className="flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
           >
-            <motion.div 
+            <motion.div
               whileHover={{ rotate: 20 }}
               className="w-12 h-12 bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-500 rounded-xl flex items-center justify-center shadow-lg overflow-hidden"
             >
@@ -106,15 +106,22 @@ export default function Home() {
             >
               Privacy Policy
             </a>
+            {/* Google Play button (the Web Version button in the hero covers the web app) */}
             <motion.a
-              href="https://kidspark-bay.vercel.app"
+              href="https://play.google.com/store/apps/details?id=com.kid_spark.app"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Get KidSpark on Google Play"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 py-2.5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 sm:px-5 py-2.5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
             >
-              Open App 🚀
+              <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+              </svg>
+              <span>
+                <span className="hidden sm:inline">Get it on </span>Google Play
+              </span>
             </motion.a>
           </nav>
         </div>
@@ -128,14 +135,14 @@ export default function Home() {
     Hi, I'm Spark! ⭐
   </span>
 </div>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           className="text-center"
         >
           {/* Badge */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -147,7 +154,7 @@ export default function Home() {
           </motion.div>
 
           {/* Title */}
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -190,7 +197,7 @@ export default function Home() {
           </div>
 
           {/* Subtitle */}
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -202,7 +209,7 @@ export default function Home() {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -224,7 +231,7 @@ export default function Home() {
                 <div className="text-lg font-bold">Google Play</div>
               </div>
             </motion.a>
-            
+
             <motion.a
               href="https://kidspark-bay.vercel.app"
               target="_blank"
@@ -317,7 +324,7 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="relative z-10 max-w-6xl mx-auto px-4 py-16">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -347,7 +354,7 @@ export default function Home() {
               whileHover={{ y: -8, scale: 1.02 }}
               className="bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all"
             >
-              <motion.div 
+              <motion.div
                 whileHover={{ rotate: 10, scale: 1.1 }}
                 className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-4 shadow-lg`}
               >
@@ -371,7 +378,7 @@ export default function Home() {
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-          
+
           {/* Spark: on phones, in place of the 🎉 */}
 <SparkMascot className="w-28 mx-auto mb-2 md:hidden" />
 
@@ -420,7 +427,7 @@ export default function Home() {
             Trusted by Parents Everywhere 👨‍👩‍👧‍👦
           </h2>
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-            KidSpark is designed with your child's safety and education in mind. 
+            KidSpark is designed with your child's safety and education in mind.
             We take privacy seriously.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -458,7 +465,7 @@ export default function Home() {
                 KidSpark
               </span>
             </a>
-            
+
             <div className="flex items-center gap-6 text-gray-600">
               <a href="/privacy-policy" className="hover:text-purple-600 transition-colors font-medium">
                 Privacy Policy
@@ -466,9 +473,9 @@ export default function Home() {
               <a href="mailto:support@kid-spark.app" className="hover:text-purple-600 transition-colors font-medium">
                 Contact Us
               </a>
-              <a 
-                href="https://kidspark-bay.vercel.app" 
-                target="_blank" 
+              <a
+                href="https://kidspark-bay.vercel.app"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-purple-600 transition-colors font-medium"
               >
@@ -514,7 +521,7 @@ export default function Home() {
                 </svg>
               </a>
             </div>
-            
+
             <p className="text-gray-500 text-sm">
               <span className="block font-bold text-gray-600">Learn • Create • Imagine</span>
               <span className="block">KidSpark (Kid Spark) – free learning games for kids</span>
